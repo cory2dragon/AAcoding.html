@@ -18,8 +18,7 @@
 <h1> Cory's Math Problems</h1>
 <div>Timer: <span id="theTime">0</span> 
 Score: <span id="score">0</span>
-Errors: <span id="errors">0</span>
-<span id="text">0</span></div>
+Errors: <span id="errors">0</span></div>
 <ol>
 <li>\(2^3\) <input data-correct='8' /> </li>
 <li>\(\sqrt[3]{8}\) <input data-correct='2' /> </li>
@@ -64,11 +63,6 @@ function onChange(evt){
     {
       $(this).removeClass('incorrect').removeClass('correct');
     }
-  if (score == "10")
-  {
-    let text = $("text");
-    text = "Nice job!!";
-    $("text").text(text);
     
 }//end onChange
     </script>
