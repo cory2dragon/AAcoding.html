@@ -55,7 +55,7 @@ function onChange(evt){
   if(correct != response && response != ""){
     $(this).removeClass('correct').addClass('incorrect');
     if (Math.random()>.9) {sad.play;}
-    let errors = Number($("#errors").text
+    let errors = Number($("#errors").text());
     errors = errors + 1;
     $("#errors").text(errors);
   }
