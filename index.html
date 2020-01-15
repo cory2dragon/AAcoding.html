@@ -48,11 +48,16 @@ function onChange(evt){
   //$(this) is whatever set the function off
   if (correct == response){
     $(this).removeClass('incorrect').addClass('correct');
+    let score = Number($("#score").text());
+    score = score + 1;
+    $("#score").text(score);
   }
   else{
     $(this).removeClass('correct').addClass('incorrect');
     if (Math.random()>.9) {sad.play;}
-    errors += 1;
+    let errors = Number($("#errors").text());
+    errors = errors + 1;
+    $("#errors").text(errors);
   }
   if (response == "")
     {
