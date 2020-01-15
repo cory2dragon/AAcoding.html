@@ -11,6 +11,10 @@
 <body translate="no">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<audio id = "sad" controls>
+  <source src="https://math.seattleacademy.org/garyanderson/snd/sad.mp3" type="audio/mpeg">
+  Your browser does not support the audio type.
+</audio>
 <h1> Cory's Math Problems</h1>
 <div>Timer: <span id="theTime">0</span> 
 Score: <span id="score">0</span></div>
@@ -34,6 +38,8 @@ function upTime(){
   theTime = theTime + 1;
   $('#theTime').text(theTime);
 }//end upTime
+var sad = document.getElementById("sad");
+
 $("input").change(onChange);
 function onChange(evt){
   let correct = $(this).data("correct");
@@ -44,6 +50,7 @@ function onChange(evt){
   }
   else{
     $(this).removeClass('correct').addClass('incorrect');
+    if (Math.random()>.9) {sad.play;}
   }
   if (response == "")
     {
