@@ -52,7 +52,7 @@ function onChange(evt){
     score = score + 1;
     $("#score").text(score);
   }
-  if(correct != response){
+  if(correct != response && response != ""){
     $(this).removeClass('correct').addClass('incorrect');
     if (Math.random()>.9) {sad.play;}
     let errors = Number($("#errors").text());
