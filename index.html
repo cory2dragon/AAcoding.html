@@ -35,9 +35,12 @@ Errors: <span id="errors">0</span></div>
 <script id="rendered-js">
 setInterval(upTime, 1000);
 function upTime(){
-  let theTime = Number($("#theTime").text());
-  theTime = theTime + 1;
-  $('#theTime').text(theTime);
+  if (score != 10)
+  {
+    let theTime = Number($("#theTime").text());
+    theTime = theTime + 1;
+    $('#theTime').text(theTime);
+  }
 }//end upTime
 var sad = document.getElementById("sad");
 
@@ -63,7 +66,7 @@ function onChange(evt){
     {
       $(this).removeClass('incorrect').removeClass('correct');
     }
-    
+
 }//end onChange
     </script>
 </body>
